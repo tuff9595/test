@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* 共通部分ここから */
+html{
+  scroll-behavior: smooth;
+}
+/* 共通部分ここまで */
+
+/* トップページここから */
+#nav {
+  list-style-type: none;
+  line-height: 30px;
+  text-align: right;
+}
+#nav a {
+  text-decoration: none;
+  color: black;
+}
+#main {
+  display: flex;
+}
+#main_image {
+  margin: 170px 20px 150px 50px;
+  height: 350px;
+  width: 600px;
+}
+#menu {
+  font-family: "Merriweather", serif;
+  margin: 120px 20px 300px 200px;
+}
+
+/* トップページここまで */
+h2 {
+  font-family: "Merriweather", serif;
+  margin-left: 200px;
+  text-decoration: underline;
+}
+
+/* プロフィールページここから */
+#profile {
+  display: flex;
+}
+#profile_text {
+  font-size: 20px;
+  list-style-type: none;
+  line-height: 45px;
+  font-family: "Merriweather", serif;
+  margin: 80px 20px 300px 50px;
+}
+#profile_image {
+  width: 400px;
+  height: 400px;
+  margin: 80px 20px 300px 250px;
+}
+.element{
+    opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 3s, visibility 3s, transform 3s;
+}
+.is-fadein {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+/* プロフィールページここまで */
+
+/* 画像ページここから */
+
+#grid{
+    margin-left: 200px;
+}
+
+#photo {
+    margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap:5px;
+  list-style: none;
+}
+
+.fadein {
+    opacity : 0;
+    transform : translate(0, 100px);
+    transition : all 1s;
+  }
+.fadein.active{
+    opacity : 1;
+    transform : translate(0, 0);
+  }
+  /* 画像ページここまで */
+
+  /* コンタクトページここから */
+  #contact{
+    margin-top: 200px;
+    display: flex;
+  }
+  #map{
+    position: absolute;
+    left: 650px;
+    margin-bottom: 200px;
+  }
+  #contact_text{
+    position: absolute;
+    left: 200px;
+  }
+  #instagram{
+    position: absolute;
+    left: 20px;
+  }
+  /* コンタクトページここまで */
+
+  /* Go Top */
+#gotop {
+	position: fixed;
+	right: 23px;
+	bottom: 20px;
+}
+
+#gotop a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	/* border-radius: 50%; */
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	line-height: 50px;
+  font-family: "Merriweather", serif;
+}
+/* Go Top */
+
+/* フッター */
+footer{
+  margin-top: 400px;
+  font-family: "Merriweather", serif;
+}
+
+@media(max-width:600px){
+  html{
+    width: 500px;
+  }
+  #profile {
+    display: flex;
+    flex-direction: column;
+  }
+  #profile_text {
+    font-size: 15px;
+    list-style-type: none;
+    font-family: "Merriweather", serif;
+    margin: 30px 0 400px 300px;
+  }
+  #profile_image {
+    width: 400px;
+    height: 400px;
+    margin: 80px 20px 30px 250px;
+  }
+}
+
